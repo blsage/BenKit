@@ -16,7 +16,7 @@ public struct LoadingOverlay: ViewModifier {
     }
 
     var padding: Double {
-        done ? 0 : 0.25
+        done ? -0.25 : 0.25
     }
 
     public func body(content: Content) -> some View {
@@ -50,5 +50,5 @@ extension View {
 #Preview {
     Color.red
         .frame(width: 100, height: 100)
-        .loadingOverlay(40, done: false)
+        .loadingOverlay(40, done: true)
 }
